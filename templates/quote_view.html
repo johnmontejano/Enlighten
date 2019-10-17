@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<head>
+    <title>{{product.title}}</title>
+</head>
+<body>
+<div class="container">
+    <div style='width: 20rem; margin: 0 auto;'class="card bg-light">
+            <div class="card-body">
+                <h1 class="card-title"> {{product.title}} </h1>
+                <h6 class="card-text">{{product.quote}}</h6>
+                <a href="" class="btn btn-success"><i class="far fa-thumbs-up"></i></a>
+                <a href="" class="btn btn-danger"><i class="far fa-thumbs-down"></i></a>
+
+            </div>
+            <hr>
+    <div class="container" style='margin:0 auto;'>
+        <p>
+            <a href='/products/{{ product._id }}/edit'>
+                <button type="button" class="btn btn-primary">Edit</button>
+            </a>
+        </p>
+        <p>
+            <form method='POST' action='/products/{{product._id}}/delete'>
+                <input type='hidden' name='_method' value='DELETE'>
+                <button class='btn btn-primary' type='submit'>Delete</button>
+            </form>
+        </p>
+    </div>
+    </div>
+</div>
+</body>
+
+{% endblock %}

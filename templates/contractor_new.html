@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<head>
+    <title>Enlighten | Create Inspiration</title>
+    
+</head>
+<div style='margin-top:8rem; padding:3rem; background:lightgrey; border-radius: 8px;'class="container">
+<div class='row justify-content-center'>
+    <div class='col-sm-6 col-sm-offset-3'>
+        <form method='POST' action='/products'>
+            {% include 'partials/contractor_form.html' %}
+            <div class='form-group'>
+                <button class='btn btn-primary' type='submit'>Publish <i class="far fa-paper-plane"></i></button>
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+{% endblock %}

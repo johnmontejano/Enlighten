@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class='container row'>
+    <div class='col justify-content-center'>
+        <form method='POST' action='/products/{{product._id}}'>
+            <input type='hidden' name='_method' value='PUT'/>
+            {% include 'partials/contractor_form.html' %}
+            <!-- BUTTON -->
+            <div class='form-group'>
+                <button class='btn btn-primary' type='submit'>Save Product</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

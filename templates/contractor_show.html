@@ -1,0 +1,19 @@
+<head>
+    <title>{{product.title}}</title>
+</head>
+
+<link rel='stylesheet' href="https://bootswatch.com/4/lux/bootstrap.min.css">
+<div class='row'>
+    <div class='col-sm-6 col-sm-offset-3'>
+        <h1>{{ product.title }}</h1>
+        <h3>{{ product.quote }}</h3>
+
+        <p><a href='/products/{{ product._id }}/edit'>
+            <button type="button" class="btn btn-primary">Edit</button>
+        </a></p>
+        <p><form method='POST' action='/products/{{product._id}}/delete'>
+            <input type='hidden' name='_method' value='DELETE'>
+            <button class='btn btn-primary' type='submit'>Delete</button>
+        </form></p>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<fieldset>
+    <!-- Title -->
+    <div class='form-group'>
+        <label for='product-title'>Headline</label><br>
+        <input class='form-control' id='product.title' type='text' name='title' value='{{ product.title }}' placeholder="Enter your headline:"/>
+    </div>
+
+    <!-- price -->
+    <div class='form-group'>
+        <label>Quote</label><br>
+        <input class='form-control' placeholder='Enter quote:' id='quote' type='text' name='quote' value='{{ product.quote }}' />
+    </div>
+
+    <!--[bike feature!] this code will be rendered when user chooses img-->
+
+    <!-- <div class='form-group'>
+        <label for='picture'>Picture</label><br/>
+        <p class='text-muted'>Add picture URL'.</p>
+        <textarea class='form-control' id='product.img' name='img' rows='10' />{{ "\n".join(product.img) }}</textarea>
+    </div> -->
+</fieldset>
