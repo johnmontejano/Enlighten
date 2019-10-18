@@ -3,7 +3,7 @@ from pymongo import MongoClient
 from bson.objectid import ObjectId
 import os
 
-host = os.environ.get('MONGODB_URI', 'mongodb://localhost:27017/contractor')
+host = os.environ.get('MONGODB_URI', 'mongodb://localhost:27017/Enlighten')
 client = MongoClient(host=f'{host}?retryWrites=false')
 db = client.get_default_database()
 products = db.products
