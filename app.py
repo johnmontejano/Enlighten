@@ -8,11 +8,11 @@ client = MongoClient(host=f'{host}?retryWrites=false')
 db = client.get_default_database()
 products = db.products
 price = db.price
+products.drop()
 products.insert_one({'title': 'Push Harder', 'quote': 'Push Harder Than Yesterday, if you want a different tomorrow'})
 products.insert_one({'title': 'Time', 'quote': 'An inch of time, is an inch of gold'})
 products.insert_one({'title': 'Dedication', 'quote': 'Long term dedication pays off'})
 products.insert_one({'title': 'Money', 'quote': 'Never spend money you did not earn'})
-
 
 app = Flask(__name__)
 
